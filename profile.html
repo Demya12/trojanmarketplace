@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trojan Marketplace</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .camera-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .camera-container label {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .camera-container img {
+      width: 100px; /* Adjust width to fit the whole image */
+      height: auto; /* Maintain aspect ratio */
+      transition: transform 0.3s, border-color 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .camera-container img:hover {
+      border-color: #e67c00;
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    input[type="file"] {
+      display: none; /* Hide the file input */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Trojan Marketplace</h1>
+    <p>Fill in the rest of your profile.</p>
+    
+    <!-- Camera Button -->
+    <div class="camera-container">
+      <label for="profilePicture">
+        <img src="camera.png" alt="Add Profile Picture">
+      </label>
+      <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+      <p>Add a profile picture.</p>
+    </div>
+
+    <!-- Form -->
+    <form action="login.php" method="POST">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="School email" required>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username" required>
+
+      <label for="password">Password</label>
+      <input type="text" id="password" name="password" placeholder="Password" required>
+
+      <button type="submit">Get Started</button>
+    </form>
+  </div>
+</body>
+</html>
